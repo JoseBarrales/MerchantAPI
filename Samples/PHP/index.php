@@ -24,7 +24,7 @@
 				$_SESSION["transactionId"] =  $newOrder->transactionId;
 				$_SESSION["apikey"] =  $newOrder->apikey;
 				$_SESSION["token"] =  $newOrder->token;
-				header('Location: index.php?action=confirm');
+				header('Location: checkout.php?action=confirm');
 
 	    	}
 	    	else
@@ -42,7 +42,7 @@
     	if($_GET['action'] =="confirm")
     	{	
     	
-    		echo "<form action='index.php' method='get'> confirm passcode <input type='text' name='passCode' value='passcode'><input type='hidden' name='action' value='submit'><input type='submit'></form>";
+    		echo "<form action='checkout.php' method='get'> confirm passcode <input type='text' name='passCode' value='passcode'><input type='hidden' name='action' value='submit'><input type='submit'></form>";
     	
     	}elseif ($_GET['action'] =="submit") {	
 
